@@ -5,6 +5,17 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
+/**
+ * to run: prima di inserire MANIFEST
+ * Maven:
+ * java -cp target/chatsimple-1.0-SNAPSHOT.jar it.room.chatsimple.Inizio
+ *
+ * to run: dopo aver inserito il MANIFEST
+ * Maven:
+ * java -jar chatsimple-1.0-SNAPSHOT.jar
+ * 
+ * @author ma
+ */
 public class Inizio {
 
     public static void main(String[] args) {
