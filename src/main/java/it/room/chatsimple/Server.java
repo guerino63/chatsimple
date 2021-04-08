@@ -15,6 +15,8 @@ import javax.swing.JOptionPane;
  * L' ascolto in rete si effettua usando un 
  * indirizzo IP(indirizzo internet) ed una porta(meglio se compresa tra 6000 e 65000) che 
  * Server e Client conoscono e condividono
+ * per scoprire il vostro IP, potete usare uno dei tanti siti disponibili su internet
+ * //@see http://www.ilmioindirizzoip.it/
  * 
  * @author ma
  */
