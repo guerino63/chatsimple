@@ -75,13 +75,14 @@ public class Server {
         
         /*
         Loop di spedizione messaggi verso Client.
-        Si esce quando si riceve dal Client il messaggio "esci"
+        Si esce quando si riceve dal Client il messaggio "esco"
         */
         while(true){ 
             //Attendiamo messaggio da Client
             String readUTF = ricevi.readUTF();
             print(readUTF); //Print output del messaggio ricevuto dal Client
-            if(readUTF.toLowerCase().contains("esci")){ //Se il messaggio è "esci", terminiamo il Server uscendo dal loop
+            //Qui c'e' un difetto volutamente introdotto dal vostro insegnante, vediamo chi lo scopre per primo...
+            if(readUTF.toLowerCase().contains("esco")){ //Se il messaggio è "esco", terminiamo il Server uscendo dal loop
                 break;
             }
             //Richiesta input di un messaggio da pedire al Client

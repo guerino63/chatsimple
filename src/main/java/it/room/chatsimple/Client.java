@@ -73,7 +73,8 @@ public class Client {
             String ilClientDice = spedisciString(readLine);
             spedisci.writeUTF(ilClientDice);
             printEcho(readLine);
-            if (readLine.toLowerCase().contains("esci")) { //Se il messaggio e' "esci", terminiamo il Server uscendo dal loop
+            //Qui c'e' un difetto volutamente introdotto dal vostro insegnante, vediamo chi lo scopre per primo...
+            if (readLine.toLowerCase().contains("esco")) { //Se il messaggio e' "esco", terminiamo il Server uscendo dal loop
                 break;
             }
 
