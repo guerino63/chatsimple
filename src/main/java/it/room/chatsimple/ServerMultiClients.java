@@ -132,12 +132,25 @@ public class ServerMultiClients {
                     Logger.getLogger(ServerMultiClients.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 print(readUTF); //Print output del messaggio ricevuto dal Client
-                //Qui c'e' un difetto volutamente introdotto dal vostro insegnante, vediamo chi lo scopre per primo...
+                
+                if(readUTF==null) //Inaccettabile ritorno di null, usciamo dal server
+                    return;
+                //Estrapoliamo il nome del Client
+                int n1 = readUTF.indexOf('[');
+                int n2 = readUTF.indexOf(']');
+                String nomeDelClient;
+                if(n1 != -1 && n2 != -1){
+                    n2++;   //Per prendere anche il carattere ']'
+                    nomeDelClient = readUTF.substring(n1,n2);
+                } else {
+                    nomeDelClient = "---";
+                }
+                //Qui c'e' qualche difetto volutamente introdotto dal vostro insegnante, vediamo chi lo scopre per primo...
                 if (readUTF.toLowerCase().contains("esco")) { //Se il messaggio è "esco", terminiamo il Server uscendo dal loop
                     break;
                 }
                 //Richiesta input di un messaggio da pedire al Client
-                String readLine = JOptionPane.showInputDialog(null, "Messaggio da spedire al Client...", "SERVER", JOptionPane.QUESTION_MESSAGE);
+                String readLine = JOptionPane.showInputDialog(null, "Messaggio da spedire al Client"+nomeDelClient+"...", "SERVER["+NOME_UTENTE+"]", JOptionPane.QUESTION_MESSAGE);
                 ilServerDice = spedisciString(readLine);
                 try {
                     spedisci.writeUTF(ilServerDice);

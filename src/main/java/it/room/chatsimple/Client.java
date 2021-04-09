@@ -69,7 +69,7 @@ public class Client {
             String readUTF = ricevi.readUTF();
             print(readUTF); //Print output del messaggio ricevuto dal Server
             //Richiesta input di un messaggio attraverso una Dialog Box
-            String readLine = JOptionPane.showInputDialog(null, "Messaggio da spedire al Server...", "CLIENT", JOptionPane.QUESTION_MESSAGE);
+            String readLine = JOptionPane.showInputDialog(null, "Messaggio da spedire al Server...", "CLIENT["+nomeUtente+"]", JOptionPane.QUESTION_MESSAGE);
             String ilClientDice = spedisciString(readLine);
             spedisci.writeUTF(ilClientDice);
             printEcho(readLine);
