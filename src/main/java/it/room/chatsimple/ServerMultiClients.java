@@ -26,7 +26,7 @@ public class ServerMultiClients {
      * Costruttore 1 - Le variabili di classe avranno valori di default
      */
     public ServerMultiClients() {
-        NOME_UTENTE = "Mario Rossi";
+        NOME_UTENTE = "Server di Mario Rossi";
         PORTA = 6868;
     }
 

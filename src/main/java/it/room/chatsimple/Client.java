@@ -40,6 +40,9 @@ public class Client {
         this.ip = ip;
         this.porta = porta;
     }
+    public Client(String nomeUtente) {
+        this(nomeUtente,"127.0.0.1",6868);
+    }
 
     public void init() throws IOException {
 

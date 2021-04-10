@@ -30,7 +30,7 @@ public class Server {
      * Costruttore 1 - Le variabili di classe avranno valori di default
      */
     public Server() {
-        nomeUtente = "Mario Rossi";
+        nomeUtente = "Server di Mario Rossi";
         porta = 6868;
     }
 

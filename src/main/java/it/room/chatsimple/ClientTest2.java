@@ -11,8 +11,7 @@ import java.util.logging.Logger;
 public class ClientTest2 extends Client{
 
     public ClientTest2() {
-        super();
-        nomeUtente = "Utente Client-2";
+        super("Utente Client-2");
     }
     
     public static void main(String[] args) {
